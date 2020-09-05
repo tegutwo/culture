@@ -1,0 +1,14 @@
+{
+  "name": "www.tegutwoculture.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile_scss":"node-sass public/css/main.scss public/css/style.css -w"
+  },
+  "author": "Alvin Tegutwo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

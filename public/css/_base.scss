@@ -1,0 +1,33 @@
+
+:root{
+    --color_primary:#F2BD94;
+    --color_primary--dark:#31120D;
+    --color_primary--light: #76271F;
+
+    --color_secondary--highlight:#FF9800;
+    --color_secondary--highlight2:#2DC61C;
+
+    --color_grey--light:#BEBDBF;
+    --color_grey:#585859;
+    --color_grey--dark:#1E1E20;
+}
+*{
+    margin: 0 ;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow: auto;
+    z-index: -20;
+    // min-height: 100vh;
+    font-size: 1.6rem;
+}

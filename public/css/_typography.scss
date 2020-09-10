@@ -4,9 +4,18 @@
     font-weight: 600;
     color: var(--color_primary--dark);
 }
-.hair__styles{
+.heading--secondary{
+    font-size: 2.4rem;
+    text-transform: uppercase;
     position: relative;
-    padding: 10rem ;
-    height: 100vh;
-    background-color: white;
 }
+.heading--tertiary{
+    text-align: center;
+    line-height: 2;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+
+}
+

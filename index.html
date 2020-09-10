@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <title>Tegutwo Culture</title>
@@ -16,9 +16,9 @@
             </div>
             <nav class="user__nav">
                 <ul class="user__nav-box">
-                    <li class="user__nav-items"><a href="#" class="user__nav-link">Styles</a> </li>
+                    <li class="user__nav-items"><a href="#styles" class="user__nav-link">Styles</a> </li>
                     <li class="user__nav-items"><a href="#" class="user__nav-link">Gallery</a> </li>
-                    <li class="user__nav-items"><a href="#" class="user__nav-link">Reviews</a> </li>
+                    <li class="user__nav-items"><a href="#gallery" class="user__nav-link">Reviews</a> </li>
                     <li class="user__nav-items"><a href="#" class="user__nav-link">Contact</a> </li>
                 </ul>
                 </nav>
@@ -26,10 +26,10 @@
        
     </div>
     <header class="header">
-       <div class="img_container"></div> <img  class="header__img" src="public/Assets/header.png" alt="Julie Tegutwo founder and hair stylist at Tegutwo Culture">
+       <div class="img_container"><img  class="header__img" src="public/Assets/header.png" alt="Julie Tegutwo founder and hair stylist at Tegutwo Culture"></div> 
        <div class="text__Box text__Box--header">
         <h1 class="heading--primary">Protective Hair styles</h1>
-        <p class="par__main text__Box-p">We provide long lasting <a href="#" class="linked__text"> Hair Styles</a> that allow room for growth while maintaining a beautiful clean look.</p>
+        <p class="par__main text__Box-p">We provide long lasting <a href="#styles" class="linked__text"> Hair Styles</a> that allow room for growth while maintaining a beautiful clean look.</p>
         <a href="#" class="btn btn--header">Book</a>
        </div>
     </header>
@@ -45,8 +45,75 @@
             </div>
            
         </section>
+        <section class="gallery" id="gallery">
+
+        </section>
+        <section class="review" id="gallery">
+            <div class="review__container">
+                <div class="review__items">
+                    <figure class="review__items-image-container">
+                        <img src="public/Assets/web1.PNG" alt="User profile" class="review__items-image">
+                    </figure>
+                    <div class="review__items-textbox">
+                        <h2 class="review__items-header">
+                            Amazing Growth!
+                        </h2>
+                        <span class="review__items-review">Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas. Aenean luctus, lorem in hendrerit interdum, leo orci egestas diam, ac euismod massa est et turpis</span>
+                        <span class="review__items-name">Alicia Keys</span>
+                    </div>    
+                </div>
+                <div class="review__items">
+                    <figure class="review__items-image-container">
+                        <img src="public/Assets/web2.PNG" alt="User profile" class="review__items-image">
+                    </figure>
+                    <div class="review__items-textbox">
+                        <h2 class="review__items-header">
+                            Amazing Growth!
+                        </h2>
+                        <span class="review__items-review">Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas. Aenean luctus, lorem in hendrerit interdum, leo orci egestas diam, ac euismod massa est et turpis</span>
+                        <span class="review__items-name">Alicia Keys</span>
+                    </div>    
+                </div>
+              
+            </div>
+        </section>
     </main>
-    
+    <footer class="footer" id="contacts">
+        <figure class="footer__Logo">
+            <img src="public/Assets/Logo/2x/Asset 1@2x.png" alt="tegutwo culture logo" class="footer__Logo-icon">
+        </figure>
+        <div class="footer__content">
+            <div class="textbox">
+                <h1 class="heading--tertiary">Working Hours</h1>
+                <p class="content__p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero labore dolorem enim magnam, dolor est consectetur, doloremque corrupti voluptates quibusdam cumque, provident doloribus fugiat architecto blanditiis pariatur voluptatum quaerat!
+                </p>
+            </div>
+            <div class="textbox">
+                <h1 class="heading--tertiary">Booking</h1>
+                <p class="content__p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero labore dolorem enim magnam, dolor est consectetur, doloremque corrupti voluptates quibusdam cumque, provident doloribus fugiat architecto blanditiis pariatur voluptatum quaerat!
+                </p>
+            </div>
+        </div>
+        <div class="contacts">
+            <a href="#" class="footer__btns">
+                <svg class="footer__icon">
+                    <use xlink:href="public/Assets/sprite.svg#icon-facebook-with-circle"></use>
+                </svg>
+            </button>
+           <a href="#" class="footer__btns">
+            <svg class="footer__icon">
+                <use xlink:href="public/Assets/sprite.svg#icon-instagram-with-circle"></use>
+            </svg>
+        </a>
+            <a href="#" class="footer__btns">
+                <svg class="footer__icon">
+                    <use xlink:href="public/Assets/sprite.svg#icon-twitter-with-circle"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
   
    
     <div class="socialMedia">

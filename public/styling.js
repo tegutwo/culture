@@ -66,17 +66,36 @@ let HairList = [
     }
     addContainers();
     let mainSelection = document.querySelectorAll("div.main");
-    console.log(mainSelection);
+  
     mainSelection.forEach(function(e){
-        console.log(e);
         e.addEventListener("click",function (){
-            console.log("click");
         accordion();
         e.nextSibling.classList.toggle("active");
         });
     });
     function accordion(){
         let content = document.querySelectorAll("div.content");
-        console.log(content);
         content.forEach((e) => e.classList.remove("active"));
     }
+
+    /////////////////////////////////
+    /////gallery
+    let gallerySection = document.getElementById("gallery");
+    let pictures = [];
+    for(let i= 1;i<=14;i++){
+        let imgsrc= 'public/gallery/img' + i;
+        pictures.push(imgsrc);
+    }
+    function createGallery(){
+        for(let i =1;i<pictures.length;i++){
+            let img_container = document.createElement("div");
+            img_container.classList.add("gallery__img-container");
+            let img = document.createElement("img");
+            img.classList.add("gallery__img");
+            img.src = pictures[i] +".JPG";
+            img_container.appendChild(img);
+            gallerySection.appendChild(img_container);
+        }
+       
+    }
+    createGallery();

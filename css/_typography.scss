@@ -1,0 +1,21 @@
+.heading--primary{
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--color_primary--dark);
+}
+.heading--secondary{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    position: relative;
+}
+.heading--tertiary{
+    text-align: center;
+    line-height: 2;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+
+}
+

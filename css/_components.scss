@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// button
+.btn,
+.btn:link,
+.btn:visited{
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    padding: .3rem 2.5rem;
+    border-radius: .3rem;
+    background-color: var(--color_primary--dark);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+.btn--header{
+    align-self: flex-start;
+    margin-top:3rem;
+    
+    @include respond(phone){
+      width: 50%;
+      align-self: center;
+     }      
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/*Linked texts*/
+.linked__text{
+    color: var(--color_primary--dark);
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.price{
+    color: var( --color_secondary--highlight2);
+    padding-left:1rem ;
+}
+.size{
+    color: var(--color_secondary--highlight);
+}
+.main{
+    cursor: pointer;
+}
+.content{
+    display: none;
+}
+.active{
+    display: flex;
+}

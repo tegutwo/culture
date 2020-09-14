@@ -77,6 +77,7 @@ body {
   backface-visibility: hidden; }
   @media (max-width: 37.5em) {
     .main__header {
+      top: 0;
       margin: 0;
       margin-top: 0; } }
 
@@ -168,7 +169,7 @@ body {
       .header .img_container {
         position: relative;
         width: 55rem;
-        left: -30%; } }
+        left: -20%; } }
     @media (max-width: 37.5em) {
       .header .img_container {
         position: relative;
@@ -183,7 +184,8 @@ body {
     @media (max-width: 37.5em) {
       .header__img {
         height: 90vh;
-        width: auto; } }
+        width: auto;
+        filter: grayscale(1px); } }
   .header .text__Box--header {
     margin-left: -10rem;
     display: flex;
@@ -203,7 +205,7 @@ body {
       .header .text__Box--header {
         color: white;
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 65%;
         transform: translate(50%, -50%);
         text-align: center;
@@ -305,13 +307,15 @@ body {
   flex-wrap: wrap; }
   @media (max-width: 56.25em) {
     .gallery {
-      max-height: 90vh; } }
+      max-height: 50vh;
+      flex-direction: row-reverse;
+      padding: 5rem .5rem; } }
   .gallery::-webkit-scrollbar {
     display: none; }
   .gallery__img-container {
     flex: 15%;
     max-width: 15%;
-    padding: .1rem .1rem;
+    padding: .1rem .3rem;
     max-height: 70vh;
     transition: transform .5s ease-in; }
     @media (max-width: 56.25em) {
@@ -326,6 +330,9 @@ body {
       flex-grow: 5; }
       .gallery__img-container:last-child:hover {
         transform: translate(-4rem, -1rem) scale(1.2); }
+        @media (max-width: 37.5em) {
+          .gallery__img-container:last-child:hover {
+            transform: translate(-4rem, -1rem) scale(1.2); } }
     .gallery__img-container:hover {
       transform: translateY(-1rem) scale(1.2);
       z-index: 4; }
@@ -439,7 +446,8 @@ main {
     @media (max-width: 56.25em) {
       .footer .footer__content {
         flex-direction: column;
-        text-align: center; } }
+        text-align: center;
+        padding: 1rem; } }
     .footer .footer__content .textbox {
       flex-basis: 40%;
       line-height: 1.5; }

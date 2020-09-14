@@ -6,6 +6,7 @@
     box-shadow: 0 1rem 1rem rgba($color: black, $alpha: .1);
     backface-visibility: hidden;
     @include respond(phone){
+        top: 0;
         margin: 0;
         margin-top: 0;
     }
@@ -113,7 +114,7 @@
        @include respond(tab-port) {
            position: relative;
         width: 55rem;
-        left: -30%;
+        left: -20%;
           }
           @include respond(phone) {
          position: relative;
@@ -123,7 +124,6 @@
     &__img{
         display: block;
         width: 100%;
-       
               @include respond(tab-land){
                 height: 90vh;
             width: auto;
@@ -131,6 +131,7 @@
               @include respond(phone) {
                 height: 90vh;
                 width: auto;
+                filter: grayscale(1px);
               }
         
        
@@ -156,7 +157,7 @@
          @include respond(phone){
             color: white;
              position: absolute;
-             top: 70%;
+             top: 60%;
              left: 65%;
              transform: translate(50%,-50%);
              text-align: center;
@@ -289,16 +290,17 @@
      display: flex;
     flex-wrap: wrap;
     @include respond(tab-port){
-      max-height: 90vh;
+      max-height: 50vh;
+      flex-direction: row-reverse;
+      padding: 5rem .5rem;
       }     
    &::-webkit-scrollbar {
        display: none;
     }
  &__img-container{
-
      flex: 15%;
     max-width: 15%;
-    padding: .1rem .1rem;
+    padding: .1rem .3rem;
     max-height: 70vh;
     transition: transform .5s ease-in ;
     @include respond(tab-port){
@@ -313,6 +315,9 @@
     flex-grow: 5;
     &:hover{
         transform: translate(-4rem,-1rem) scale(1.2);
+        @include respond(phone){
+           transform: translate(-4rem,-1rem) scale(1.2);
+        }
     }
     }
     &:hover{
@@ -456,6 +461,7 @@ main{
         @include respond(tab-port){
           flex-direction: column;
           text-align: center;
+          padding: 1rem;
         }
         .textbox{
             flex-basis: 40%;

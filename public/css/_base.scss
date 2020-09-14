@@ -120,5 +120,8 @@ body{
     @include respond(tab-land) {
         font-size: 1.6rem;
       }
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
 
 }

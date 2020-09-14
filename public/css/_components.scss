@@ -16,10 +16,14 @@
     align-self: flex-start;
     margin-top:3rem;
     
-    @include respond(phone){
-      width: 50%;
+    @include respond(tab-land){
+      width: 40%;
       align-self: center;
      }      
+     @include respond(tab-port){
+        width: 50%;
+        align-self: center;
+       }      
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////

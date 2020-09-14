@@ -13,6 +13,7 @@
     // border-bottom: 2px solid var( --color_primary--dark);
 }
     .section1{
+       
         width: 100vw;
         backface-visibility: hidden;
         height: 8vh;
@@ -23,6 +24,7 @@
         background-color: rgba($color: white, $alpha: 1);
         @include respond(phone){
             padding: 1rem 1rem;
+            font-size: 1.4rem;
         }
         .logo{
             display: flex;
@@ -91,7 +93,7 @@
 }
 .header{
      position: sticky;
-     top: 8vh;
+     top: 0;
     overflow-y: hidden;
    margin: 0 1rem;
     height: 100vh;
@@ -110,7 +112,9 @@
         position: relative;
         width: 50rem;
         align-self: flex-end;
-
+        @include respond(tab-land){
+            width: auto;
+        }
        @include respond(tab-port) {
            position: relative;
         width: 55rem;
@@ -125,13 +129,14 @@
         display: block;
         width: 100%;
               @include respond(tab-land){
+                  overflow: hidden;
                 height: 90vh;
-            width: auto;
+         width: auto;
             }      
               @include respond(phone) {
                 height: 90vh;
                 width: auto;
-                filter: grayscale(1px);
+                // filter: blur(1px) grayscale(1);
               }
         
        
@@ -140,6 +145,8 @@
         
     }
     .text__Box--header{
+    
+        z-index: 10;
         margin-left: -10rem;
         display: flex;
         flex-direction: column;
@@ -148,21 +155,36 @@
         letter-spacing: .2rem;
         line-height: 2;
         margin-bottom: 18rem;
-        @include respond(tab-port){
-           align-content: center;
-            flex: 0 0 50%;
-            margin-left: -30rem;
+        @include respond(tab-land){
+            font-size: 1.8rem;
+            color: white;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+           width: 40%;
+           margin: 0;
             z-index: 10;
+            padding: 2rem;
+            background-color: rgba(#F2BD94,0.8);
+            border-radius: 1rem;
         }      
          @include respond(phone){
             color: white;
              position: absolute;
              top: 60%;
-             left: 65%;
-             transform: translate(50%,-50%);
+             left: 50%;
+             transform: translate(-50%,-50%);
              text-align: center;
-            width: 50%;
+            width: 80%;
+            margin: 0;
              z-index: 10;
+             padding: 2rem;
+             background-color: rgba(#F2BD94,0.8);
+             border-radius: 1rem;
+            //  background-image: linear-gradient(rgba(var(--color_primary),0.5),rgba(var(--color_primary),0.9));
+          
          }      
         .text__Box-p{
             font-size: 1.4rem;
@@ -186,13 +208,14 @@
     overflow: hidden;
     @include respond(phone){
       flex-direction: column-reverse;
-      justify-content: center;
-      padding: 10rem;
+      justify-content: flex-start;
+      padding: 10rem 4rem;
       }     
     &-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
      
     }
     &-items{
@@ -236,6 +259,9 @@
  align-items: center;
  margin-bottom: 10rem;
 //  margin-right: 10rem; 
+@include respond(tab-port){
+   padding: 5rem;
+  }     
  .img{
     box-shadow: 1rem 1.5rem 1rem rgba($color: black, $alpha: .5);
      transition: transform .5s ease-in-out;
@@ -246,6 +272,7 @@
     flex: 0 1 3;
     @include respond(tab-port){
        width: 15rem;
+       padding: .3rem;
      }      
  
      &:hover{
@@ -461,11 +488,16 @@ main{
         @include respond(tab-port){
           flex-direction: column;
           text-align: center;
-          padding: 1rem;
+          padding: 1rem 4rem;
         }
         .textbox{
             flex-basis: 40%;
             line-height: 1.5;
+            @include respond(tab-port){
+               &:not(:last-child){
+                   margin-bottom: 3rem;
+               }
+              }
         }
     }
 

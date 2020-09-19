@@ -18,4 +18,24 @@
     font-weight: 700;
 
 }
+.heading__tertiary{
+    font-size: 2.5rem;
+    line-height: 7;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1rem;
+    @include respond(phone){
+        line-height: 5;
+        padding-top: 7rem;
+        }     
+
+    &::before{
+        content: "------  ";
+        color: var(--color_grey--light);
+    }
+    &::after{
+        content: "  -------";
+        color: var(--color_grey--light);
+    }
+}
 

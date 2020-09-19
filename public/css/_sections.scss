@@ -12,8 +12,7 @@
     }
     // border-bottom: 2px solid var( --color_primary--dark);
 }
-    .section1{
-       
+.section1{
         width: 100vw;
         backface-visibility: hidden;
         height: 8vh;
@@ -50,6 +49,7 @@
         .user__nav{
             display: flex;
             flex: 0 0 30%;
+            transition: all 2s ease-in-out;
             &-box{
                 display: flex;
                 flex: 0 0 100%;
@@ -63,6 +63,15 @@
             &-link{
                 text-decoration: none;
                 color: var(--color_primary--dark);
+                &:active{
+                    color: var(--color_secondary--highlight);
+                }
+                &:link{
+                    color: var(--color_primary--dark);
+                }
+               
+
+
                 
             }
         }
@@ -110,7 +119,7 @@
          }
     .img_container{
         position: relative;
-        width: 50rem;
+        width: 45rem;
         align-self: flex-end;
         @include respond(tab-land){
             width: auto;
@@ -145,7 +154,6 @@
         
     }
     .text__Box--header{
-    
         z-index: 10;
         margin-left: -10rem;
         display: flex;
@@ -156,7 +164,7 @@
         line-height: 2;
         margin-bottom: 18rem;
         @include respond(tab-land){
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: white;
             position: absolute;
             top: 60%;
@@ -167,7 +175,7 @@
            margin: 0;
             z-index: 10;
             padding: 2rem;
-            background-color: rgba(#F2BD94,0.8);
+            background-image: linear-gradient(to right bottom,rgba(#F2BD94,0.8),rgba(#76271F,0.8));
             border-radius: 1rem;
         }      
          @include respond(phone){
@@ -200,7 +208,7 @@
 .hair__styles{
     flex-wrap: wrap-reverse;
     position: relative;
-    padding: 20rem 5rem 15rem 0;
+    padding: 10rem 5rem 15rem 0;
     background-color: white;
     display: flex;
     justify-content:space-around;
@@ -209,7 +217,7 @@
     @include respond(phone){
       flex-direction: column-reverse;
       justify-content: flex-start;
-      padding: 10rem 4rem;
+      padding: 5rem 4rem;
       }     
     &-container{
         display: flex;
@@ -307,7 +315,7 @@
     overflow-x: scroll;
     overflow-y: scroll;
     max-height: 80vh;
-    padding: 10rem 2rem;
+    padding: 14rem 2rem;
     background-color: var(--color_primary--dark);
     justify-content: center;
     align-items: center;
@@ -320,7 +328,13 @@
       max-height: 50vh;
       flex-direction: row-reverse;
       padding: 5rem .5rem;
-      }     
+      }   
+      @include respond(phone){
+        max-height: 70vh;
+        flex-direction: row-reverse;
+        padding: 5rem .5rem;
+        }   
+
    &::-webkit-scrollbar {
        display: none;
     }
@@ -372,7 +386,7 @@ main{
 }
 .review{
     background-image: linear-gradient(to right,rgba(#fff,0.5),transparent,rgba(#fff,0.5));
-    padding: 20rem 0;
+    padding: 5rem 0 20rem;
     position: relative;
     z-index: 5;
     display: flex;
@@ -389,12 +403,12 @@ main{
         height: 100%;
         align-items: center;
         justify-content: center;
+        padding: 0 .5rem;
     }
     &__items{
-        
         box-sizing: content-box;
         padding: 3rem 6rem  2rem;
-        padding-left:10rem ;
+        padding-left:10rem;
         background-color: var(--color_primary);
         display: flex;
         align-items: center;
@@ -404,6 +418,8 @@ main{
         box-shadow: .5rem 1rem 1rem rgba($color: black, $alpha: .1);
         @include respond(tab-port){
             transform: skewX(0);
+            width: 85vw;
+            box-shadow: .5rem .5rem .2rem rgba($color: black, $alpha: .1);
         }
         &:not(:last-child){
             margin-bottom: 3rem;
@@ -419,6 +435,7 @@ main{
             border-radius: 1rem;
             @include respond(tab-port){
                 transform: skewX(0);
+            
             }
         }
         &-image{
@@ -483,6 +500,7 @@ main{
         }
     }
     .footer__content{
+        order: 1;
         display: flex;
         justify-content: space-around;
         @include respond(tab-port){
@@ -507,6 +525,7 @@ main{
     .contacts{
         display: flex;
         margin-top: 3rem;
+        
     }
     .footer__btns{
         color: transparent;

@@ -5,17 +5,37 @@
 .btn:visited{
     display: inline;
     text-decoration: none;
-    color: #fff;
     padding: .3rem 2.5rem;
     border-radius: .3rem;
-    background-color: var(--color_primary--dark);
     text-transform: uppercase;
     letter-spacing: .3rem;
 }
 .btn--header{
+    background-color: white;
+    color:var(--color_primary--dark);
     align-self: flex-start;
     margin-top:3rem;
+    box-shadow: .2rem .5rem .6rem rgba($color: #000000, $alpha: .5);
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+    @include respond(tab-land){
     
+    }
+    &:hover{
+        background-color: white;
+        color: var(--color_primary--dark);
+        font-weight: bold;
+        box-shadow: .2rem .5rem .6rem rgba($color: #000000, $alpha: .4);
+        transform: translateY(-.4rem);
+        @include respond(phone){
+            box-shadow: none;
+        }
+    }
+    &:active{
+       box-shadow: .2rem .5rem .6rem rgba($color: #000000, $alpha: .8);
+       transform: translateY(-.2rem);
+    }
+
     @include respond(tab-land){
       width: 40%;
       align-self: center;
